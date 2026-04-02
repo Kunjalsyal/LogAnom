@@ -1,0 +1,34 @@
+LOGANOM REPORT
+
+Total logs: 5000
+Anomalies detected: 150
+Anomaly percentage: 3.0%
+
+Confusion Matrix:
+[[4790   37]
+ [  60  113]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.99      0.99      0.99      4827
+           1       0.75      0.65      0.70       173
+
+    accuracy                           0.98      5000
+   macro avg       0.87      0.82      0.84      5000
+weighted avg       0.98      0.98      0.98      5000
+
+
+Top 10 Most Suspicious Events:
+
+                 timestamp         service level  latency_ms  request_count                                         message  anomaly_score
+2026-04-02 19:31:21.428265    auth-service ERROR     1379.88             20 latency spike detected while processing request      -0.145737
+2026-04-02 19:31:40.428265  search-service ERROR     1222.99             15 latency spike detected while processing request      -0.143995
+2026-04-02 19:31:15.428265  search-service ERROR     1446.47             21 latency spike detected while processing request      -0.139662
+2026-04-02 22:51:43.428265  search-service ERROR     1168.51             20 latency spike detected while processing request      -0.138495
+2026-04-02 22:49:22.428265  search-service ERROR     1257.52             22 latency spike detected while processing request      -0.137863
+2026-04-02 19:17:39.428265 payment-service ERROR     1405.59             24 latency spike detected while processing request      -0.132827
+2026-04-02 21:31:22.428265 payment-service ERROR     1546.46             32 latency spike detected while processing request      -0.132794
+2026-04-02 20:52:30.428265    auth-service ERROR     1188.98             31 latency spike detected while processing request      -0.130118
+2026-04-02 21:07:18.428265   order-service ERROR     1377.33             24 latency spike detected while processing request      -0.129960
+2026-04-02 22:31:19.428265    auth-service ERROR     1275.13             25 latency spike detected while processing request      -0.129066
